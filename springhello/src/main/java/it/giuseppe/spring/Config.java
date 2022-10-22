@@ -1,6 +1,6 @@
 package it.giuseppe.spring;
 
-import java.util.Scanner;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,14 +16,7 @@ import it.giuseppe.Disco;
 public class Config {
     @Bean
     public Programma getProgramma() {
-    	String nome;
-    	double dim;
-    	Scanner input = new Scanner(System.in);
-    	System.out.println("Inserisci nome del programma");
-    	nome = input.nextLine();
-    	System.out.println("Inserisci la dimensione");
-    	dim = input.nextDouble();
-    	input.close();
-        return new Programma(nome, dim);
+    	
+        return new Programma("Java.exe", 3.2);
     }
 }
